@@ -1,0 +1,55 @@
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes beat-fade {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Apply the animation to the alert messages */
+.alert {
+    animation: fade-out 5s ease-in-out;
+    animation-fill-mode: forwards; /* Keep the last frame of animation */
+}
+
+table {
+    border: 1px solid black;
+    width: 100%; /* Use full width */
+    border-collapse: collapse; /* Merge adjacent borders */
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px; /* Add some padding for better spacing */
+    text-align: center; /* Center-align content */
+}
+
+/* Apply the animation to the alert messages */
+.alert {
+    animation: fade-out 5s ease-in-out;
+    animation-fill-mode: forwards; /* Keep the last frame of animation */
+}
+
+.nav-item a.nav-link.active span {
+    font-size: 20px;
+}
+.nav-item a.nav-link.active i.fas {
+    font-size: 20px;
+}
+.nav-item a.nav-link.active:hover,
+.nav-item a.nav-link.active:focus,
+.nav-item a.nav-link.active:active {
+    animation: beat-fade 2s infinite;
+}
